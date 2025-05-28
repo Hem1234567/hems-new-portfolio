@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+.floating-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.rotate-slow {
+  animation: spin 20s linear infinite;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+.gradient-bg {
+  background: linear-gradient(365deg, rgba(190, 149, 222, 1) 0%, rgba(227, 145, 219, 1) 100%, rgba(223, 100, 237, 1) 100%);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+@keyframes flipWords {
+  0% { opacity: 0; transform: rotateX(90deg); }
+  10% { opacity: 1; transform: rotateX(0deg); }
+  25% { opacity: 1; transform: rotateX(0deg); }
+  35% { opacity: 0; transform: rotateX(90deg); }
+  100% { opacity: 0; transform: rotateX(90deg); }
+}
+
+.flipping-text {
+  position: relative;
+  height: 2rem; /* Adjust based on text size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flipping-text span {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  animation: flipWords 6s infinite ease-in-out;
+}
+
+.flipping-text span:nth-child(1) { animation-delay: 0s; }
+.flipping-text span:nth-child(2) { animation-delay: 2s; }
+.flipping-text span:nth-child(3) { animation-delay: 4s; }
+
+
+
